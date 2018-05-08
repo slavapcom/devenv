@@ -1,0 +1,20 @@
+version: '3'
+services:
+  web:
+    build: ./docker/web
+    links:
+      - db:db
+    ports:
+     - "80:80"
+    volumes:
+     - ./:/var/www/html/
+  db:
+    image: mysql:5.7
+    environment:
+     - MYSQL_ROOT_PASSWORD=123
+     - MYSQL_DATABASE=main
+    ports:
+     - "3306:3306"
+    volumes:
+     - ./docker/db/etc_mysql_conf.d:/etc/mysql/conf.d
+     - ./docker/db/dump:/docker-entrypoint-initdb.d

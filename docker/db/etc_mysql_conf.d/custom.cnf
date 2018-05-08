@@ -1,0 +1,7 @@
+[mysqld]
+bind-address = 0.0.0.0
+
+[mysqldump]
+max_allowed_packet = 16M
+
+character_set_server=utf8mb4
