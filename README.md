@@ -17,7 +17,10 @@ Installation
 TODOs
 -----
 [] fix web/entrypoint.sh
+[] add example of docker-php-ext-install
 [] make mysql data directory shareable with the host
 [] add configuration for nginx and php-fpm
 [] add mongo
 [] add more useful stuff: gitattributes, editorconfig, etc
+[] add install.sh
+[] add drupal & symfony specific configs
